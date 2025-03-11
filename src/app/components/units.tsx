@@ -69,7 +69,7 @@ const Units = () => {
       </div>
 
       {selectedUnit && (
-        <div className="absolute left-0 right-0 top-[700px] bg-black/50 py-10">
+        <div className="absolute left-0 right-0 top-[783px] bg-black/50 py-10">
           <div className="bg-[#478EB2] text-white p-6 rounded-xl shadow-lg w-[960px] mx-auto relative px-[60px]">
             <button
               className="w-[40px] h-[40px] absolute top-[40px] right-[40px] text-white text-2xl font-normal border-[3px] rounded-full hover:text-gray-300"

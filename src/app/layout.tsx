@@ -3,8 +3,11 @@ import { Instrument_Sans } from "next/font/google";
 import "./globals.css";
 
 const instrumentSans = Instrument_Sans({
-  subsets: ["latin"],
-  variable: "--font-instrument-sans",
+  subsets: ["latin"], // Subconjunto de caracteres (latim)
+  variable: "--font-instrument-sans", // Variável CSS para a fonte
+  display: 'swap', // Garante que a fonte seja exibida imediatamente com fallback
+  weight: ["400", "500", "600", "700"], // Especifica os pesos da fonte
+  style: ["normal", "italic"], // Especifica os estilos (normal e itálico)
 });
 
 export const metadata: Metadata = {
