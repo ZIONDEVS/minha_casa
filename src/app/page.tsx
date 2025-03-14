@@ -4,12 +4,14 @@ import Hero from './components/Hero';
 import Units from './components/units';
 import AboutUs from './components/aboutus';
 import Services from './components/services';
+import { MenuMobile } from './components/header/menuMobile';
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
       <div>
         <Header />
+        <MenuMobile/>
         <Hero />
         <Units/>
         <AboutUs/>

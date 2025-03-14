@@ -1,59 +1,32 @@
 import React from 'react';
-import Image from 'next/image';
 
 const AboutUs = () => {
     return (
-        <section id='sobre-nos' className='w-full h-auto md:h-[1250px] lg:h-[768px] py-[60px] lg:py-[100px] px-[100px] bg-[#72A66A]'>
-            <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between">
-                {/* Grid de Imagens */}
-                <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4">
-                    {/* Primeira imagem (coluna 1) */}
-                    <div className="col-span-1 row-span-2">
-                        <Image
-                            src="/about_1.png" // Primeira imagem
-                            alt="About 1"
-                            width={300}
-                            height={600}
-                            className="rounded-lg shadow-lg object-cover w-full h-full"
-                        />
-                    </div>
-
-                    {/* Segunda imagem (coluna 2) */}
-                    <div className="col-span-1">
-                        <Image
-                            src="/about_2.png" // Segunda imagem
-                            alt="About 2"
-                            width={300}
-                            height={300}
-                            className="rounded-lg shadow-lg object-cover w-full h-full"
-                        />
-                    </div>
-
-                    {/* Terceira imagem (coluna 2) */}
-                    <div className="col-span-1">
-                        <Image
-                            src="/about_3.png" // Terceira imagem
-                            alt="About 3"
-                            width={300}
-                            height={300}
-                            className="rounded-lg shadow-lg object-cover w-full h-full"
-                        />
-                    </div>
-                </div>
-
-                {/* Texto */}
-                <div className="lg:w-1/2 text-white lg:pl-10 mt-10 lg:mt-[-55px]">
-                    <h1 className="lg:text-[75px] mb-6" style={{ fontWeight: 500 }}>Quem Somos</h1>
-                    <p className="w-[540px] text-lg lg:text-[21px] font-normal mb-6 ">
-                        Somos um lar para idosos que oferece um ambiente familiar, seguro e confortável, com diversas opções de lazer e atendimento personalizado para atender a todas as necessidades com excelência.
-                    </p>
-                    <p className="w-[540px] text-lg lg:text-[21px] font-normal mb-6">
-                        Nossa estrutura segue todas as normas para casas de repouso, em uma localização privilegiada, a 500 metros da praia. Contamos com ambientes amplos e arejados, além de uma extensa área externa com solaríums, piscina, jardins, árvores frutíferas e hortas.
-                    </p>
-                    <button className="bg-[#4C7345] text-white px-8 py-3 rounded-full font-semibold transition-colors cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
-                        <a href="">ENTRE EM CONTATO</a>
+        <section
+            id="sobre-nos"
+            className="w-full h-auto flex flex-col lg:flex-row"
+        >
+            {/* Lado Esquerdo - Texto */}
+            <div className="w-full lg:w-1/2 bg-[#72A66A] text-white flex flex-col justify-center px-6 md:px-12 lg:px-24 py-12 lg:py-[100px]">
+                <h1 className="text-[40px] lg:text-[75px] font-medium mb-6 text-center lg:text-left">
+                    Quem Somos
+                </h1>
+                <p className="w-[340px] text-[21px] lg:text-[21px] font-normal mb-6 text-center lg:text-left">
+                    Somos um Lar para Idosos dedicado a oferecer ambientes familiares, seguros, confortáveis e repletos de opções de lazer para os nossos moradores e hóspedes.
+                </p>
+                <p className="w-[340px] text-[21px] lg:text-[21px] font-normal mb-6 text-center lg:text-left">
+                Provemos um atendimento personalizado de excelência em nossas unidades, que estão situadas em localizações privilegiadas e contam com ambientes cuidadosamente planejados, amplos e arejados, além de possuírem extensas áreas externas para convívio.
+                </p>
+                <div className="flex justify-center lg:justify-start">
+                    <button className="bg-[#4C7345] w-[229px] h-[50px] text-white px-6 py-3 rounded-full font-semibold transition-transform duration-300 ease-in-out hover:scale-105">
+                        ENTRE EM CONTATO
                     </button>
                 </div>
+            </div>
+
+            {/* Lado Direito - Fundo Cinza com Texto */}
+            <div className="w-full lg:w-1/2 h-[510px] lg:h-auto bg-gray-300 flex items-center justify-center py-12 lg:py-0">
+                <p className="text-gray-600 text-lg">Vídeo aqui</p>
             </div>
         </section>
     );

@@ -11,11 +11,7 @@ export const MenuItems: MenuItemsProps[] = [
     },
     {
         label: 'Unidades',
-        link: 'unidades',
-    },
-    {
-        label: 'Serviços',
-        link: 'servicos',
+        link: 'units',
     },
     {
         label: 'Quem somos',
