@@ -50,8 +50,8 @@ const AboutUs = () => {
                     <p className="w-[540px] text-lg lg:text-[21px] font-normal mb-6">
                         Nossa estrutura segue todas as normas para casas de repouso, em uma localização privilegiada, a 500 metros da praia. Contamos com ambientes amplos e arejados, além de uma extensa área externa com solaríums, piscina, jardins, árvores frutíferas e hortas.
                     </p>
-                    <button className="bg-white text-[#72A66A] px-8 py-3 rounded-full font-semibold hover:bg-[#E0E0E0] transition-colors cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
-                        ENTRE EM CONTATO
+                    <button className="bg-[#4C7345] text-white px-8 py-3 rounded-full font-semibold transition-colors cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
+                        <a href="">ENTRE EM CONTATO</a>
                     </button>
                 </div>
             </div>
