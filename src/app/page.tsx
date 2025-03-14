@@ -5,6 +5,7 @@ import Units from './components/units';
 import AboutUs from './components/aboutus';
 import Services from './components/services';
 import { MenuMobile } from './components/header/menuMobile';
+import Local from './components/localization';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Units/>
         <AboutUs/>
         <Services/>
+        <Local/>
       </div>
     </div>
   )
