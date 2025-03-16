@@ -116,68 +116,70 @@ const Services = () => {
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+  
     // Validações
     if (!name || !validateName(name)) {
       alert("Por favor, insira um nome válido (apenas letras).");
       return;
     }
-
+  
     if (!phone || !validatePhone(phone)) {
       alert("Por favor, insira um número de telefone válido no formato (00) 0 0000-0000.");
       return;
     }
-
+  
     if (!email || !validateEmail(email)) {
       alert("Por favor, insira um e-mail válido.");
       return;
     }
-
+  
     if (!subject) {
       alert("Por favor, insira um assunto.");
       return;
     }
-
+  
     if (!message) {
       alert("Por favor, insira uma mensagem.");
       return;
     }
-
+  
     if (!acceptTerms) {
       alert("Você deve aceitar os termos de uso.");
       return;
     }
-
+  
     try {
       const formData = new FormData();
-      formData.append("entry.2075121683", name); // Nome
-      formData.append("entry.1738609305", phone); // Telefone
-      formData.append("entry.464897036", email); // E-mail
-      formData.append("entry.2072447748", subject); // Assunto
-      formData.append("entry.380690400", message); // Mensagem
-      formData.append("entry.1763763591", acceptTerms ? "Sim" : "Não"); // Termos de uso
-
-      console.log("Formulário está sendo enviado com os dados:", {
-        name,
-        phone,
-        email,
-        subject,
-        message,
-        acceptTerms,
-      });
-
-      const response = await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLScAQc8WuS6rE0iEH-Cjj14tQ55WJuHETcXKjlxrmEugFqDDPw/formResponse",
+      formData.append("entry.1819178168", name); // Nome
+      formData.append("entry.559145066", phone); // Telefone
+      formData.append("entry.1765810086", email); // E-mail
+      formData.append("entry.545184362", subject); // Assunto
+      formData.append("entry.1779712791", message); // Mensagem
+      formData.append("entry.1965771624", acceptTerms ? "Sim" : "Não"); // Termos de uso
+  
+      console.log("Formulário está sendo enviado com os dados:",
+        {
+          name,
+          phone,
+          email,
+          subject,
+          message,
+          acceptTerms,
+        });
+  
+      // Envia o formulário
+      await fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLSc6djWwnOV3fcA_oedEvgEvtr-XK0HeLThwKu19sxPFwctnYw/formResponse",
         {
           method: "POST",
           body: formData,
-          mode: "no-cors",
+          mode: "no-cors", // Modo no-cors não permite acesso à resposta
         }
       );
-
-      console.log("Resposta recebida:", response);
+  
+      // Se chegou aqui, o formulário foi enviado com sucesso
       alert("Formulário enviado com sucesso!");
-
+  
       // Limpar os campos após o envio
       setName("");
       setPhone("");
@@ -269,9 +271,15 @@ const Services = () => {
                   <p className="text-[16.6px] text-white mt-4 whitespace-pre-line">
                     {service.description}
                   </p>
-                  <button className="w-[229px] h-[50px] mb-[20px] flex mx-auto justify-center items-center bg-[#478EB2] text-white font-bold text-[14px] px-4 py-2 rounded-full mt-6 hover:bg-[#3b7ea0] transition">
+                  <a
+                    href="https://web.whatsapp.com/send?phone=5521973658192&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es!"
+                    target="_blank" // Abre o link em uma nova aba
+                    rel="noopener noreferrer" // Boa prática para links externos
+                    className="w-[229px] h-[50px] mb-[20px] flex mx-auto justify-center items-center bg-[#478EB2] text-white font-bold text-[14px] px-4 py-2 rounded-full mt-6 hover:bg-[#3b7ea0] transition"
+                  >
                     {service.buttonText}
-                  </button>
+                  </a>
+
                 </>
               )}
             </div>

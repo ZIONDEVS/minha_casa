@@ -15,12 +15,18 @@ const AboutUs = () => {
                     Somos um Lar para Idosos dedicado a oferecer ambientes familiares, seguros, confortáveis e repletos de opções de lazer para os nossos moradores e hóspedes.
                 </p>
                 <p className="w-[340px] text-[21px] lg:text-[21px] font-normal mb-6 text-center lg:text-left">
-                Provemos um atendimento personalizado de excelência em nossas unidades, que estão situadas em localizações privilegiadas e contam com ambientes cuidadosamente planejados, amplos e arejados, além de possuírem extensas áreas externas para convívio.
+                    Provemos um atendimento personalizado de excelência em nossas unidades, que estão situadas em localizações privilegiadas e contam com ambientes cuidadosamente planejados, amplos e arejados, além de possuírem extensas áreas externas para convívio.
                 </p>
                 <div className="flex justify-center lg:justify-start">
-                    <button className="bg-[#4C7345] w-[229px] h-[50px] text-white px-6 py-3 rounded-full font-semibold transition-transform duration-300 ease-in-out hover:scale-105">
+                    {/* Link estilizado como botão */}
+                    <a
+                        href="https://web.whatsapp.com/send?phone=5521973658192&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es!"
+                        target="_blank" // Abre o link em uma nova aba
+                        rel="noopener noreferrer" // Boa prática para links externos
+                        className="bg-[#4C7345] w-[229px] h-[50px] text-white px-6 py-3 rounded-full font-semibold transition-transform duration-300 ease-in-out hover:scale-105 flex items-center justify-center"
+                    >
                         ENTRE EM CONTATO
-                    </button>
+                    </a>
                 </div>
             </div>
 
