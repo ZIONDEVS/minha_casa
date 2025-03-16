@@ -3,10 +3,10 @@ export default function Local() {
         <section className="w-full text-center lg:py-[80px] py-[80px] lg:px-[140px] bg-white">
             <h2 className="text-[40px] lg:text-[75px] font-normal text-[#88A3E6] text-center mb-8">Localização</h2>
 
-            <div className="lg:w-full w-[87%] grid grid-cols-1 md:grid-cols-2 gap-6 flex mx-auto">
+            <div className="lg:w-full w-[90%] grid grid-cols-1 md:grid-cols-2 gap-6 flex mx-auto">
                 {/* Unidade Praia de Itaipú */}
                 <div>
-                    <div className="lg:w-[595px] w-[350px] h-[388px] lg:h-[388px] border border-gray-300 rounded-lg overflow-hidden">
+                    <div className="lg:w-[595px] w-full h-[388px] lg:h-[388px] border border-gray-300 rounded-lg overflow-hidden">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.0391076717346!2d-43.0364693!3d-22.9651868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99863738f517e5%3A0x5248044ef54e033c!2sEstr.%20Francisco%20da%20Cruz%20Nunes%2C%2012%20-%20Itaipu!5e0!3m2!1spt-BR!2sbr!4v1710442023456"
                             width="100%"
@@ -35,7 +35,7 @@ export default function Local() {
 
                 {/* Unidade Bairro Peixoto */}
                 <div>
-                    <div className="lg:w-[595px] w-[350px] h-[388px] lg:h-[388px] border border-gray-300 rounded-lg overflow-hidden lg:mt-0 mt-[40px]">
+                    <div className="lg:w-[595px] w-full h-[388px] lg:h-[388px] border border-gray-300 rounded-lg overflow-hidden lg:mt-0 mt-[40px]">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.665939348081!2d-43.026201!3d-22.9532482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99861c1d7b3307%3A0xb9ae2a03f67e485c!2sRua%20Ignêz%20Peixoto%2C%20671%2C%20Itaipu!5e0!3m2!1spt-BR!2sbr!4v1710442023456"
                             width="100%"

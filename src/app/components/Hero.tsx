@@ -73,7 +73,7 @@ const Hero = () => {
     return (
         <section
             id="hero"
-            className="pt-20 h-screen md:h-[700px] lg:h-screen w-full overflow-hidden relative px-[15px]"
+            className="pt-20 h-[650] md:h-[700px] lg:h-[768px] w-full overflow-hidden relative px-[15px]"
         >
             {/* Imagem de fundo com transição */}
             <div className="absolute inset-0 z-0">
@@ -107,12 +107,12 @@ const Hero = () => {
             <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/85 to-transparent z-10" />
 
             {/* Conteúdo sobreposto */}
-            <div className="mt-[260px] lg:mt-0 lg:ml-[120px] lg:top-[360px] relative z-20">
+            <div className="mt-[260px] lg:mt-0 lg:ml-[120px] lg:top-[370px] relative z-20">
                 <h1 className="w-[306px] lg:w-full font-semibold lg:text-[60px] text-[40px] leading-[105%] lg:leading-[57px] text-white">
                     {slides[currentIndex].title}
                 </h1>
                 <h2
-                    className={`mt-[20px] lg:mt-[-15px] font-light text-[22px] lg:text-[40px] leading-[120%] lg:leading-[66px] text-white ${slides[currentIndex].textWidth}`}
+                    className={`lg:w-full mt-[20px] lg:mt-[5px] font-light text-[22px] lg:text-[40px] lg:leading-[66px] leading-[120%] text-white ${slides[currentIndex].textWidth}`}
                 >
                     {slides[currentIndex].subtitle}
                 </h2>

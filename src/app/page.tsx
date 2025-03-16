@@ -6,6 +6,7 @@ import AboutUs from './components/aboutus';
 import Services from './components/services';
 import { MenuMobile } from './components/header/menuMobile';
 import Local from './components/localization';
+import Footer from './components/footer';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <AboutUs/>
         <Services/>
         <Local/>
+        <Footer/>
       </div>
     </div>
   )
