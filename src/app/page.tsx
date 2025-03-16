@@ -7,6 +7,7 @@ import Services from './components/services';
 import { MenuMobile } from './components/header/menuMobile';
 import Local from './components/localization';
 import Footer from './components/footer';
+import CookieConsent from './components/cookies';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <div>
         <Header />
         <MenuMobile/>
+        <CookieConsent/>
         <Hero />
         <Units/>
         <AboutUs/>
