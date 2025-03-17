@@ -146,7 +146,6 @@ const Units = () => {
               </div>
             </div>
 
-            {/* Carrossel de Imagens */}
             <div className="mt-8 mb-[100px] relative">
               <Swiper
                 modules={[Navigation, Pagination]}
@@ -181,7 +180,6 @@ const Units = () => {
                 ))}
               </Swiper>
 
-              {/* Setas personalizadas */}
               <div className="custom-next absolute top-1/2 right-[-27px] transform -translate-y-1/2 z-10 cursor-pointer">
                 <Image
                   src="/arrow-right.png"
@@ -201,7 +199,6 @@ const Units = () => {
                 />
               </div>
 
-              {/* Paginação personalizada */}
               <div
                 className="custom-pagination flex justify-center mt-4 space-x-2"
                 style={{
@@ -210,7 +207,6 @@ const Units = () => {
                   marginTop: '1rem',
                 }}
               >
-                {/* Estilos inline para as bolinhas */}
                 <style global jsx>
                   {`
                     .custom-pagination .swiper-pagination-bullet {

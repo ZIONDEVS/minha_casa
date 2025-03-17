@@ -4,7 +4,6 @@ export default function Local() {
             <h2 className="text-[40px] lg:text-[75px] font-normal text-[#88A3E6] text-center mb-8">Localização</h2>
 
             <div className="lg:w-full w-[90%] grid grid-cols-1 md:grid-cols-2 gap-6 flex mx-auto">
-                {/* Unidade Praia de Itaipú */}
                 <div>
                     <div className="lg:w-[595px] w-full h-[388px] lg:h-[388px] border border-gray-300 rounded-lg overflow-hidden">
                         <iframe
@@ -33,7 +32,6 @@ export default function Local() {
                     </div>
                 </div>
 
-                {/* Unidade Bairro Peixoto */}
                 <div>
                     <div className="lg:w-[595px] w-full h-[388px] lg:h-[388px] border border-gray-300 rounded-lg overflow-hidden lg:mt-0 mt-[40px]">
                         <iframe

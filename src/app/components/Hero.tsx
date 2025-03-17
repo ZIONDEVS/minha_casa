@@ -75,7 +75,6 @@ const Hero = () => {
             id="hero"
             className="pt-20 h-[650] md:h-[700px] lg:h-[768px] w-full overflow-hidden relative px-[15px]"
         >
-            {/* Imagem de fundo com transição */}
             <div className="absolute inset-0 z-0">
                 <AnimatePresence mode="popLayout">
                     {images.map((image, index) =>
@@ -103,10 +102,8 @@ const Hero = () => {
                 </AnimatePresence>
             </div>
 
-            {/* Degradê escuro na parte inferior */}
             <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/85 to-transparent z-10" />
 
-            {/* Conteúdo sobreposto */}
             <div className="mt-[260px] lg:mt-0 lg:ml-[120px] lg:top-[370px] relative z-20">
                 <h1 className="w-[306px] lg:w-full font-semibold lg:text-[60px] text-[40px] leading-[105%] lg:leading-[57px] text-white">
                     {slides[currentIndex].title}
@@ -127,7 +124,6 @@ const Hero = () => {
                 </a>
             </div>
 
-            {/* Dots de paginação */}
             <div className="absolute bottom-[20px] left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
                 {slides.map((_, index) => (
                     <div

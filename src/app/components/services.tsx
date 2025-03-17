@@ -150,12 +150,12 @@ const Services = () => {
   
     try {
       const formData = new FormData();
-      formData.append("entry.1819178168", name); // Nome
-      formData.append("entry.559145066", phone); // Telefone
-      formData.append("entry.1765810086", email); // E-mail
-      formData.append("entry.545184362", subject); // Assunto
-      formData.append("entry.1779712791", message); // Mensagem
-      formData.append("entry.1965771624", acceptTerms ? "Sim" : "Não"); // Termos de uso
+      formData.append("entry.1819178168", name); 
+      formData.append("entry.559145066", phone); 
+      formData.append("entry.1765810086", email); 
+      formData.append("entry.545184362", subject); 
+      formData.append("entry.1779712791", message); 
+      formData.append("entry.1965771624", acceptTerms ? "Sim" : "Não"); 
   
       console.log("Formulário está sendo enviado com os dados:",
         {
@@ -167,20 +167,17 @@ const Services = () => {
           acceptTerms,
         });
   
-      // Envia o formulário
       await fetch(
         "https://docs.google.com/forms/d/e/1FAIpQLSc6djWwnOV3fcA_oedEvgEvtr-XK0HeLThwKu19sxPFwctnYw/formResponse",
         {
           method: "POST",
           body: formData,
-          mode: "no-cors", // Modo no-cors não permite acesso à resposta
+          mode: "no-cors", 
         }
       );
   
-      // Se chegou aqui, o formulário foi enviado com sucesso
       alert("Formulário enviado com sucesso!");
   
-      // Limpar os campos após o envio
       setName("");
       setPhone("");
       setEmail("");
@@ -207,7 +204,6 @@ const Services = () => {
 
   const atividadesImages = Array.from({ length: 12 }, (_, i) => `/atividades/atividades_${i + 1}.png`);
 
-  // Títulos das atividades
   const atividadesTitles = [
     "Enfermagem 24h",
     "Fisioterapia",
@@ -243,9 +239,7 @@ const Services = () => {
               />
             </div>
 
-            {/* Card */}
             <div className="w-[90%] lg:w-[286px] bg-[#82BFE0] rounded-lg shadow-md p-4 mt-[15px]">
-              {/* Título com seta */}
               <div
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => toggleCard(index)}
@@ -265,7 +259,6 @@ const Services = () => {
                 </div>
               </div>
 
-              {/* Descrição (controlada pelo estado) */}
               {openIndex === index && (
                 <>
                   <p className="text-[16.6px] text-white mt-4 whitespace-pre-line">
@@ -273,8 +266,8 @@ const Services = () => {
                   </p>
                   <a
                     href="https://web.whatsapp.com/send?phone=5521973658192&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es!"
-                    target="_blank" // Abre o link em uma nova aba
-                    rel="noopener noreferrer" // Boa prática para links externos
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-[229px] h-[50px] mb-[20px] flex mx-auto justify-center items-center bg-[#478EB2] text-white font-bold text-[14px] px-4 py-2 rounded-full mt-6 hover:bg-[#3b7ea0] transition"
                   >
                     {service.buttonText}
@@ -287,7 +280,6 @@ const Services = () => {
         ))}
       </div>
 
-      {/* Atividades */}
       <div>
         <h1 className="lg:text-[75px] text-[40px] text-[#88A3E6] lg:mt-[120px] mt-[80px] mb-[80px] lg:mb-[80px] font-medium text-center">
           Atividades
@@ -317,7 +309,6 @@ const Services = () => {
                     className="object-cover"
                     unoptimized
                   />
-                  {/* Título no meio da imagem */}
                   <div className="absolute inset-0 flex items-center justify-center bg-opacity-50">
                     <h2 className="w-[170px] text-white text-2xl font-bold items-center text-center">
                       {atividadesTitles[index]}
@@ -328,10 +319,9 @@ const Services = () => {
             ))}
           </Swiper>
 
-          {/* Setas personalizadas */}
           <div className="custom-next absolute top-1/2 right-0 transform -translate-y-1/2 z-10 cursor-pointer pr-[15px]">
             <Image
-              src="/arrow-right.png" // Verifique se o caminho da imagem está correto
+              src="/arrow-right.png"
               alt="Próxima"
               width={25}
               height={25}
@@ -340,7 +330,7 @@ const Services = () => {
           </div>
           <div className="custom-prev absolute top-1/2 left-0 transform -translate-y-1/2 z-10 cursor-pointer pl-[15px]">
             <Image
-              src="/arrow-left.png" // Verifique se o caminho da imagem está correto
+              src="/arrow-left.png"
               alt="Anterior"
               width={25}
               height={25}
@@ -348,9 +338,7 @@ const Services = () => {
             />
           </div>
 
-          {/* Paginação personalizada */}
           <div className="custom-pagination absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 flex justify-center space-x-2">
-            {/* Estilos para as bolinhas */}
             <style global jsx>{`
               .custom-pagination .swiper-pagination-bullet {
                 background-color: gray;
@@ -367,7 +355,6 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Imagem de Atividades (Desktop) */}
         <div className="hidden lg:block w-full h-[1080px] relative">
           <Image
             src="/services/atividades.png"
@@ -379,14 +366,11 @@ const Services = () => {
         </div>
       </div>
 
-
-      {/* E tem mais */}
       <div>
         <h1 className="text-[40px] mt-[80px] lg:text-[75px] text-[#88A3E6] lg:mt-[120px] pb-[80px] font-medium text-center">
           E tem mais
         </h1>
         <div className="w-[90%] flex mx-auto flex-col lg:flex-row gap-4 lg:px-[120px]">
-          {/* Cards 1 a 5 (esquerda) */}
           <div className="flex-1 flex flex-col gap-4">
             {infos.slice(0, 5).map((info, index) => (
               <div
@@ -419,7 +403,6 @@ const Services = () => {
             ))}
           </div>
 
-          {/* Cards 6 a 10 (direita) */}
           <div className="flex-1 flex flex-col gap-4">
             {infos.slice(5, 10).map((info, index) => (
               <div
@@ -454,16 +437,13 @@ const Services = () => {
         </div>
       </div>
 
-      {/*Fale com a gente*/}
       <div className="w-full bg-[#82BFE0] py-12 lg:py-24 mt-[80px]">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-start lg:items-start gap-8 lg:gap-16">
-            {/* Título na lateral */}
             <h2 className="text-[40px] flex mx-auto lg:text-[75px] lg:leading-[95%] font-medium text-white lg:w-1/2">
               Fale com a gente!
             </h2>
 
-            {/* Formulário */}
             <form onSubmit={handleFormSubmit} className="w-full lg:w-1/2 bg-white p-6 rounded-lg shadow-lg mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
                 <div>
