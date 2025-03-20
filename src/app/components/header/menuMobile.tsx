@@ -12,7 +12,7 @@ export function MenuMobile() {
   }
 
   return (
-    <div className="absolute block lg:hidden fixed top-0 z-50 w-full bg-white overflow-hidden">
+    <div className=" block lg:hidden fixed top-0 z-50 w-full bg-white overflow-hidden">
       <div className={`flex justify-between items-center py-4 px-6 max-w-[100vw] ${isOpen ? 'bg-white' : 'bg-transparent'}`}>
         {!isOpen ? (
           <>

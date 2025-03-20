@@ -114,17 +114,17 @@ const Hero = () => {
                     {slides[currentIndex].subtitle}
                 </h2>
                 <a
-                    href="https://web.whatsapp.com/send?phone=5521973658192&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es!"
+                    href="https://api.whatsapp.com/send?phone=5521973658192&text=Ol%C3%A1!!"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <button className="lg:w-[229px] w-[170px] h-[38px] lg:h-[50px] bg-[#88A3E6] mt-[20px] mb-[70px] lg:mt-[28px] rounded-[200px] uppercase font-bold lg:px-[44px] px-[24px] py-[12px] lg:py-[16px] text-[12px] lg:text-[13.7px] cursor-pointer">
+                    <button className="lg:w-[229px] w-[170px] h-[38px] lg:h-[50px] bg-[#88A3E6]  hover:bg-[#88A3E6]/90 mt-[20px] mb-[70px] lg:mt-[28px] rounded-[200px] uppercase font-bold lg:px-[44px] px-[24px] py-[12px] lg:py-[16px] text-[12px] lg:text-[13.7px] cursor-pointer">
                         Entre em contato
                     </button>
                 </a>
             </div>
 
-            <div className="absolute bottom-[20px] left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
+            <div className="absolute md:bottom-[46px] bottom-[60+px]  left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
                 {slides.map((_, index) => (
                     <div
                         key={index}

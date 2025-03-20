@@ -1,9 +1,9 @@
 export default function Local() {
     return (
-        <section className="w-full text-center lg:py-[80px] py-[80px] lg:px-[140px] bg-white">
+        <section id="localizacao" className="w-full text-center lg:py-[80px] py-[80px] lg:px-[140px] bg-white">
             <h2 className="text-[40px] lg:text-[75px] font-normal text-[#88A3E6] text-center mb-8">Localização</h2>
 
-            <div className="lg:w-full w-[90%] grid grid-cols-1 md:grid-cols-2 gap-6 flex mx-auto">
+            <div className="lg:w-full w-[90%] grid grid-cols-1 md:grid-cols-2 gap-6  mx-auto">
                 <div>
                     <div className="lg:w-[595px] w-full h-[388px] lg:h-[388px] border border-gray-300 rounded-lg overflow-hidden">
                         <iframe

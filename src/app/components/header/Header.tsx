@@ -4,7 +4,7 @@ import { MenuItems } from './data'
 
 const Header = () => {
   return (
-    <div className="hidden lg:block w-full lg:h-[173px] lg:py-[27px] lg:px-[120] justify-between items-center lg:flex fixed lg:top-0 z-40 bg-white text-black">
+    <div className="hidden  w-full lg:h-[173px] lg:py-[27px] lg:px-[120] justify-between items-center lg:flex fixed lg:top-0 z-40 bg-white text-black">
       <Image
         src="/logo.svg"
         alt="logo"

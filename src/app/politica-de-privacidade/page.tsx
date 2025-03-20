@@ -1,17 +1,11 @@
 import React from 'react';
-import Header from './components/header/Header';
-import Hero from './components/Hero';
-import Units from './components/units';
-import AboutUs from './components/aboutus';
-import Services from './components/services';
-import { MenuMobile } from './components/header/menuMobile';
-import Local from './components/localization';
-import Footer from './components/footer';
-import CookieConsent from './components/cookies';
+
 import Image from 'next/image';
-import Activities from './components/ activities';
-import Facilities from './components/facilities';
-import Contact from './components/contact';
+import Header from '../components/header/Header';
+import { MenuMobile } from '../components/header/menuMobile';
+import CookieConsent from '../components/cookies';
+import Footer from '../components/footer';
+import Text from './components/text';
 
 export default function Home() {
   return (
@@ -40,14 +34,7 @@ export default function Home() {
         <Header />
         <MenuMobile/>
         <CookieConsent/>
-        <Hero />
-        <Units/>
-        <AboutUs/>
-        <Services/>
-        <Activities/>
-        <Facilities />
-        <Contact/>
-        <Local/>
+        <Text/>
         <Footer/>
       </div>
     </div>
