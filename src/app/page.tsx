@@ -7,7 +7,7 @@ import Services from './components/services';
 import { MenuMobile } from './components/header/menuMobile';
 import Local from './components/localization';
 import Footer from './components/footer';
-import CookieConsent from './components/cookies';
+
 import Image from 'next/image';
 import Activities from './components/ activities';
 import Facilities from './components/facilities';
@@ -39,7 +39,7 @@ export default function Home() {
       </a>
         <Header />
         <MenuMobile/>
-        <CookieConsent/>
+        {/* <CookieConsent/> */}
         <Hero />
         <Units/>
         <AboutUs/>

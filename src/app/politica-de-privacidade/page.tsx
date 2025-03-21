@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Header from '../components/header/Header';
 import { MenuMobile } from '../components/header/menuMobile';
-import CookieConsent from '../components/cookies';
+
 import Footer from '../components/footer';
 import Text from './components/text';
 
@@ -33,7 +33,7 @@ export default function Home() {
       </a>
         <Header />
         <MenuMobile/>
-        <CookieConsent/>
+        {/* <CookieConsent/> */}
         <Text/>
         <Footer/>
       </div>
