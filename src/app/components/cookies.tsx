@@ -70,14 +70,14 @@ const CookieConsent: React.FC = () => {
     if (!showPopup) return null;
 
   return (
-    <div className="fixed bottom-4 md:bottom-4 left-1/2 transform -translate-x-1/2 md:translate-y-0 top-1/2 md:top-auto -translate-y-1/2 w-[90%] md:w-[718px] px-[43px] py-[35px] bg-white rounded-[20px] shadow-md z-50">
+    <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[718px] px-[43px] py-[35px] bg-white rounded-[20px] shadow-md z-50">
       <p className="text-center text-gray-700 mb-6">
         Nosso site utiliza cookies para melhorar sua experiência, personalizar conteúdo e analisar o tráfego. Ao continuar navegando, você concorda com o uso de cookies. Para mais informações, consulte nossa <span className="font-bold underline cursor-pointer">Política de Privacidade</span>.
       </p>
       <div className="flex justify-center gap-4">
         <button
           onClick={handleReject}
-          className="border border-[#88A3E6] text-[#88A3E6] py-[10px] md:px-[52px] px-[42px]  hover:border-[#88A3E6]/0  rounded-full cursor-pointer"
+          className="border border-[#88A3E6] text-[#88A3E6] py-[10px] md:px-[52px] px-[42px] rounded-full cursor-pointer"
         >
           Rejeitar
         </button>
