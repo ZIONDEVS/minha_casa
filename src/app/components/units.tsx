@@ -114,7 +114,7 @@ const Units = () => {
             {/* Conteúdo do Modal - Área Scrollável com scrollbar sutil/oculta */}
             <div className="scrollbar-hide overflow-y-auto p-6 px-[30px] lg:px-[60px] flex-grow">
               <h2 className="lg:text-[46px] text-[40px] leading-[110%] mt-[40px] font-semibold">{selectedUnit.name}</h2>
-              <p className="mt-4 text-[21px] whitespace-pre-line font-light">{selectedUnit.description}</p>
+              <p className="mt-4 text-[21px] whitespace-pre-line font-light md:max-w-[1051px] max-w-[380px]">{selectedUnit.description}</p>
 
               {/* Endereço */}
               <div className="flex items-center mt-4">
@@ -165,7 +165,7 @@ const Units = () => {
                 </div>
 
                 {/* Paginação */}
-                <div className="custom-pagination flex justify-center mt-4 space-x-2"></div>
+                <div className="custom-pagination flex justify-center items-center mt-4 space-x-2"></div>
               </div>
             </div>
           </div>

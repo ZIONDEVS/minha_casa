@@ -10,11 +10,17 @@ const AboutUs = () => {
                 <h1 className="text-[40px] lg:text-[75px] font-medium mb-6 text-center lg:text-left leading-none">
                     Quem Somos
                 </h1>
-                <p className=" text-[21px] lg:text-[21px] font-normal mb-6 text-center lg:text-left">
+                <p className=" text-[21px] lg:text-[21px] font-normal mb-6 text-center lg:text-left md:flex hidden">
                 Somos um Lar para Idosos dedicado a oferecer ambientes familiares, seguros, confortáveis e repletos de opções de lazer para os nossos moradores e hóspedes. Temos como missão prover um atendimento de excelência objetivando contemplar cada necessidade de forma personalizada.
                 </p>
-                <p className=" text-[21px] lg:text-[21px] font-normal mb-6 text-center lg:text-left">
+                <p className=" text-[21px] lg:text-[21px] font-normal mb-6 text-center lg:text-left  md:flex hidden">
                 As nossas unidades estão situadas em localizações privilegiadas e contam com ambientes cuidadosamente planejados, amplos e arejados, além de possuírem extensas áreas externas com solariums, jardins, árvores frutíferas e muito mais.
+                </p>
+                <p className=" text-[21px] lg:text-[21px] font-normal mb-6 text-center lg:text-left flex md:hidden">
+                Somos um Lar para Idosos dedicado a oferecer ambientes familiares, seguros, confortáveis e repletos de opções de lazer para os nossos moradores e hóspedes.
+                </p>
+                <p className=" text-[21px] lg:text-[21px] font-normal mb-6 text-center lg:text-left flex md:hidden">
+                Provemos um atendimento personalizado de excelência em nossas unidades, que estão situadas em localizações privilegiadas e contam com ambientes cuidadosamente planejados, amplos e arejados, além de possuírem extensas áreas externas para convívio.
                 </p>
                 <div className="flex justify-center lg:justify-start">
                     <a

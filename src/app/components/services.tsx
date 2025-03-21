@@ -16,28 +16,28 @@ interface Service {
 
 const services: Service[] = [
   {
-    title: "Hospedagem Permanente",
+    title: "Moradia Assistida",
     description:
-      "O hóspede passa a morar no Residencial Minha Casa e recebe cuidados multiprofissionais 24h por dia, estando inclusas nesta modalidade, todas as nossas atividades.\n\nOs familiares participam da vida diária do hóspede e podem visitá-los a qualquer momento. O monitoramento por câmeras garante segurança e tranquilidade.",
+      "Modalidade em que a pessoa idosa passa a morar no Residencial Minha Casa recebendo os cuidados de nossa equipe multidisciplinar 24 horas por dia, usufruindo de todos os serviços, atividades e refeições. ",
     buttonText: "ENTRE EM CONTATO",
     image: "/services/service_1.png",
   },
   {
-    title: "Hospedagem Curta",
+    title: "Hospedagem Temporária",
     description:
       "A Hospedagem Temporária é ideal para quem deseja passar alguns dias, finais de semana e feriados conosco. Essa modalidade é ideal também para períodos de reabilitação em que o hóspede fica conosco por um tempo pré-determinado, baseado em metas de recuperação.\n\nAssim como na Moradia Assistida, todos os serviços, atividades e refeições estão inclusas durante o período em que o hóspede permanecer conosco.",
     buttonText: "ENTRE EM CONTATO",
     image: "/services/service_2.png",
   },
   {
-    title: "Day Care - Centro dia",
+    title: "Day Care (Centro dia)",
     description:
       "Modalidade em que o hóspede desfruta de todos os nossos cuidados, serviços e infraestrutura durante os períodos diurno e vespertino, aproveitando todos os benefícios da convivência ativa. Ao fim de cada período, retorna para a sua própria casa.\n\nAs refeições (colação, almoço e lanche), os serviços e as atividades realizadas durante o dia estão incluídas no valor do período, proporcionando benefícios decorrentes da socialização e estimulando novas e antigas habilidades.\n\nÉ uma excelente opção para aqueles que desejam usufruir dos serviços pelos períodos de sua preferência.",
     buttonText: "ENTRE EM CONTATO",
     image: "/services/service_3.png",
   },
   {
-    title: "Acompanhante hospitalar",
+    title: "Acompanhamento Hospitalar",
     description:
       "Modalidade em que um profissional de confiança e qualificado é disponibilizado para acompanhar a estadia de seu familiar durante um período de internação hospitalar, auxiliando nos cuidados de seu ente querido e lhe fazendo companhia.",
     buttonText: "ENTRE EM CONTATO",
@@ -55,7 +55,7 @@ const Services = () => {
 
 
   return (
-    <section id="servicos" className="w-full h-auto bg-white pt-[80px] lg:pt-[120px]">
+    <section id="servicos" className="w-full h-auto bg-white pt-[80px] lg:py-[120px] py-[80px]">
       <h1 className="text-[40px] lg:text-[75px] text-[#88A3E6] mb-[80px] lg:mb-[80px] font-medium text-center">
         Serviços
       </h1>
@@ -73,7 +73,7 @@ const Services = () => {
               />
             </div>
 
-            <div className="w-[90%] lg:w-[286px] bg-[#82BFE0] rounded-lg shadow-md p-4 mt-[15px]">
+            <div className="w-[90%] lg:w-[286px] bg-[#82BFE0] rounded-lg shadow-md p-4 mt-[15px] md:mb-0 mb-[40px]">
               <div
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => toggleCard(index)}
@@ -95,7 +95,7 @@ const Services = () => {
 
               {openIndex === index && (
                 <>
-                  <p className="text-[16.6px] text-white mt-4 whitespace-pre-line">
+                  <p className="text-[18px] text-white mt-4 whitespace-pre-line md:max-w-[240px]">
                     {service.description}
                   </p>
                   <a

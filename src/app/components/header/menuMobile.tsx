@@ -2,6 +2,7 @@
 import { X } from 'lucide-react'
 import Image from 'next/image'
 import { useState } from 'react'
+import Link from 'next/link'
 import { MenuItems } from './data'
 
 export function MenuMobile() {
@@ -16,14 +17,16 @@ export function MenuMobile() {
       <div className={`flex justify-between items-center py-4 px-6 max-w-[100vw] ${isOpen ? 'bg-white' : 'bg-transparent'}`}>
         {!isOpen ? (
           <>
-            <Image
-              src="/logo.svg"
-              alt="logo"
-              width={96}
-              height={67}
-              className="cursor-pointer"
-              unoptimized
-            />
+            <Link href='/'>
+              <Image
+                src="/logo.svg"
+                alt="logo"
+                width={96}
+                height={67}
+                className="cursor-pointer"
+                unoptimized
+              />
+            </Link>
             <Image
               src="/burguer.png"
               alt="menu"
@@ -36,6 +39,7 @@ export function MenuMobile() {
           </>
         ) : (
           <div className="flex items-center justify-between w-full">
+            <Link href='/'>
             <Image
               src="/logo.svg"
               alt="logo"
@@ -44,6 +48,7 @@ export function MenuMobile() {
               className="cursor-pointer"
               unoptimized
             />
+            </Link>
             <X onClick={toggleOpen} size={24} className="text-[#0582C1]" />
           </div>
         )}
@@ -57,6 +62,7 @@ export function MenuMobile() {
                 href={`#${item.link}`}
                 key={item.link}
                 onClick={() => setIsOpen(false)}
+                className='text-[19px] text-[#060606]'
               >
                 {item.label}
               </a>

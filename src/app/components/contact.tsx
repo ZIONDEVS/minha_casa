@@ -92,17 +92,17 @@ const Contact = () => {
 
 
   return (
-    <section id="contato" className="w-full bg-[#82BFE0] py-12 lg:py-24 mt-[80px]">
+    <section id="contato" className="w-full bg-[#82BFE0] py-12 lg:py-[90px] mt-[80px]">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row items-start lg:items-start gap-8 lg:gap-16">
-            <h2 className="text-[40px] flex mx-auto lg:text-[75px] lg:leading-[95%] font-medium text-white lg:w-1/2">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-16">
+            <h2 className="text-[40px] flex mx-auto lg:text-[75px] lg:leading-[95%] font-medium text-white lg:max-w-[345px]">
               Fale com a gente!
             </h2>
 
-            <form onSubmit={handleFormSubmit} className="w-full lg:w-1/2 bg-white p-6 rounded-lg shadow-lg mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+            <form onSubmit={handleFormSubmit} className="w-full md:max-w-[590px] bg-white p-6 rounded-[15px] shadow-lg py-[40px] md:px-[40px] px-[20px]">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-[24px]">
                 <div>
-                  <label htmlFor="name" className="block text-black font-medium mb-1">
+                  <label htmlFor="name" className="block text-black  text-[17px] font-medium mb-[14px]">
                     Seu nome
                   </label>
                   <input
@@ -111,26 +111,26 @@ const Contact = () => {
                     placeholder="Seu nome aqui"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88A3E6] text-black"
+                    className="w-full px-4 py-[15px] border border-black rounded-[15px] focus:outline-none focus:ring-2  text-[15px] text-black"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-black font-medium mb-1">
+                  <label htmlFor="phone" className="block text-black text-[17px] font-medium mb-[14px]">
                     Telefone
                   </label>
                   <input
                     type="tel"
                     id="phone"
-                    placeholder="(00) 0 0000-0000"
+                    placeholder="Digite o número com DDD"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88A3E6] text-black"
+                    className="w-full px-4 py-[15px] border border-black rounded-[15px] text-[15px] focus:outline-none focus:ring-2  text-black"
                   />
                 </div>
               </div>
 
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-black font-medium mb-1">
+              <div className="mb-[24px]">
+                <label htmlFor="email" className="block text-black text-[17px] font-medium mb-[14px]">
                   E-mail
                 </label>
                 <input
@@ -139,12 +139,12 @@ const Contact = () => {
                   placeholder="Seu e-mail aqui"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88A3E6] text-black"
+                  className="w-full px-4 py-[15px] border border-black rounded-[15px] focus:outline-none focus:ring-2  text-[15px] text-black"
                 />
               </div>
 
-              <div className="mb-4">
-                <label htmlFor="subject" className="block text-black font-medium mb-1">
+              <div className="mb-[24px]">
+                <label htmlFor="subject" className="block text-black text-[17px] font-medium mb-[14px]">
                   Assunto
                 </label>
                 <input
@@ -153,12 +153,12 @@ const Contact = () => {
                   placeholder="Assunto"
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88A3E6] text-black"
+                  className="w-full px-4 py-[15px] border border-black rounded-[15px] focus:outline-none focus:ring-2  text-[15px] text-black"
                 />
               </div>
 
-              <div className="mb-4">
-                <label htmlFor="message" className="block text-black font-medium mb-1">
+              <div className="mb-[24px]">
+                <label htmlFor="message" className="block text-black text-[17px] font-medium mb-[14px]">
                   Mensagem
                 </label>
                 <textarea
@@ -167,21 +167,21 @@ const Contact = () => {
                   rows={4}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#88A3E6] text-black"
+                  className="w-full px-4 py-[15px] border border-black rounded-[15px] focus:outline-none focus:ring-2  text-[15px] text-black"
                 />
               </div>
 
-              <div className="mb-4 flex items-start space-x-2">
+              <div className="mb-[24px] flex items-start space-x-2">
                 <input
                   type="checkbox"
                   id="privacy"
                   checked={acceptTerms}
                   onChange={(e) => setAcceptTerms(e.target.checked)}
-                  className="form-checkbox h-5 w-5 text-[#88A3E6] focus:ring-[#88A3E6]"
+                  className="form-checkbox h-5 w-5 text-[#88A3E6] "
                 />
-                <label htmlFor="privacy" className="text-black text-sm">
+                <label htmlFor="privacy" className="text-black lg:text-[15px] text-[14px] max-w-[454px] ">
                   Ao enviar essa mensagem você confirma estar de acordo com a{" "}
-                  <a href="#" className="text-[#88A3E6] underline">
+                  <a href="/politica-de-privacidade" className="text-black underline">
                     Política de Privacidade
                   </a>{" "}
                   da Residencial Minha Casa.
@@ -190,7 +190,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-[#478EB2] text-white font-bold py-3 rounded-full hover:bg-[#478EB2] transition-colors"
+                className="w-full bg-[#478EB2] text-white font-bold py-3 rounded-full hover:bg-[#88A3E6] transition-colors cursor-pointer"
               >
                 Enviar mensagem
               </button>

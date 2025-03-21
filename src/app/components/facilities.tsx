@@ -67,13 +67,13 @@ const [openInfoCards, setOpenInfoCards] = useState<boolean[]>(new Array(infos.le
   };
 
   return (
-    <section id="estrutura" className="w-full h-auto bg-white pt-[80px] lg:pt-[120px]">
+    <section id="estrutura" className="w-full h-auto bg-white pt-[80px] lg:pt-[120px] lg:pb-[40px]">
  
  <div>
-        <h1 className="text-[40px] mt-[80px] lg:text-[75px] text-[#88A3E6] lg:mt-[120px] pb-[80px] font-medium text-center">
+        <h1 className="text-[40px]  lg:text-[75px] text-[#88A3E6]  pb-[80px] font-medium text-center leading-none">
           E tem mais
         </h1>
-        <div className="w-[90%] flex mx-auto flex-col lg:flex-row gap-4 lg:px-[120px]">
+        <div className="w-[100%] flex mx-auto flex-col lg:flex-row gap-4 lg:px-[120px] px-[20px]">
           <div className="flex-1 flex flex-col gap-4">
             {infos.slice(0, 5).map((info, index) => (
               <div
@@ -86,19 +86,19 @@ const [openInfoCards, setOpenInfoCards] = useState<boolean[]>(new Array(infos.le
                   <h2 className="lg:w-full w-[240px] text-white text-[22px] lg:text-[26px] font-semibold flex items-center">
                     {info.title}
                   </h2>
-                  <div className="relative w-6 h-6">
+                  <div className="relative w-[22px] h-[22px]">
                     <Image
-                      src="/services/arrow.png"
+                      src="/services/arrow.svg"
                       alt="Seta"
                       fill
                       unoptimized
-                      className={`object-contain transition-transform ${openInfoCards[index] ? '' : 'rotate-180'
+                      className={`object-contain transition-transform w-[22px] h-[22px] ${openInfoCards[index] ? '' : 'rotate-180'
                         }`}
                     />
                   </div>
                 </div>
                 {openInfoCards[index] && (
-                  <p className="lg:w-[460px] w-[274px] mt-4 text-white text-[18px] lg:text-[21px] font-normal">
+                  <p className="max-w-[460px] mt-4 text-white text-[18px] lg:text-[21px] font-normal">
                     {info.description}
                   </p>
                 )}
@@ -118,19 +118,19 @@ const [openInfoCards, setOpenInfoCards] = useState<boolean[]>(new Array(infos.le
                   <h2 className="w-full lg:w-full text-white font-semibold text-[22px] lg:text-[26px]">
                     {info.title}
                   </h2>
-                  <div className="relative w-6 h-6">
+                  <div className="relative w-[22px] h-[22px]">
                     <Image
-                      src="/services/arrow.png"
+                      src="/services/arrow.svg"
                       alt="Seta"
                       fill
                       unoptimized
-                      className={`object-contain transition-transform ${openInfoCards[index + 5] ? '' : 'rotate-180'
+                      className={`object-contain transition-transform w-[22px] h-[22px] ${openInfoCards[index + 5] ? '' : 'rotate-180'
                         }`}
                     />
                   </div>
                 </div>
                 {openInfoCards[index + 5] && (
-                  <p className="lg:w-[460px] w-[300px] mt-4 text-white text-[18px] lg:text-[21px] font-normal">
+                  <p className="lg:max-w-[450px] mt-4 text-white text-[18px] lg:text-[21px] font-normal">
                     {info.description}
                   </p>
                 )}
