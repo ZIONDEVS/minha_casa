@@ -72,10 +72,10 @@ const Hero = () => {
 
     return (
         <section
-            id="hero"
-            className="pt-20 h-[650] md:h-[700px] lg:h-[768px] w-full overflow-hidden relative px-[15px]"
+            id="home"
+            className="pt-20 h-[700px] md:h-[700px] lg:h-[768px] w-full overflow-hidden relative px-[15px]"
         >
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 ">
                 <AnimatePresence mode="popLayout">
                     {images.map((image, index) =>
                         index === currentIndex ? (
@@ -104,7 +104,7 @@ const Hero = () => {
 
             <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/85 to-transparent z-10" />
 
-            <div className="mt-[260px] lg:mt-0 lg:ml-[120px] lg:top-[370px] relative z-20">
+            <div className="mt-[260px] lg:mt-0 lg:ml-[120px] ml-[20px] lg:top-[370px] relative z-20">
                 <h1 className="w-[306px] lg:w-full font-semibold lg:text-[60px] text-[40px] leading-[105%] lg:leading-[57px] text-white">
                     {slides[currentIndex].title}
                 </h1>
@@ -129,7 +129,7 @@ const Hero = () => {
                     <div
                         key={index}
                         onClick={() => setCurrentIndex(index)}
-                        className={`w-2 h-2 rounded-full cursor-pointer transition ${currentIndex === index
+                        className={`w-[10px] h-[10px] rounded-full cursor-pointer transition ${currentIndex === index
                                 ? "bg-white scale-110"
                                 : "bg-gray-400 hover:bg-gray-300"
                             }`}

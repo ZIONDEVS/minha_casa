@@ -70,8 +70,8 @@ const Units = () => {
   };
 
   return (
-    <section id="units" className="w-full lg:px-[153px] px-[16px] py-[80px] lg:py-[120px] bg-white overflow-hidden">
-      <h1 className="text-[#88A3E6] text-center font-medium text-[36px] lg:text-[75px] mb-[80px] ">
+    <section id="unidades" className="w-full lg:px-[153px] px-[16px] py-[80px] lg:py-[120px] bg-white overflow-hidden">
+      <h1 className="text-[#88A3E6] text-center font-medium text-[40px] lg:text-[75px] lg:mb-[80px]  mb-[40px]">
         Nossas Unidades
       </h1>
 

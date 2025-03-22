@@ -75,24 +75,24 @@ const Activities = () => {
   return (
     <section id="atividades" className="w-full h-auto bg-white">
       <div>
-        <h1 className="lg:text-[75px] text-[40px] text-[#88A3E6] pb-[50px] lg:pb-[80px] order-none font-medium text-center">
+        <h1 className="lg:text-[75px] text-[40px] text-[#88A3E6] pb-[40px] lg:pb-[80px] order-none font-medium text-center">
           Atividades
         </h1>
     
         <div className="w-full lg:hidden pt-8  relative">
-          <Swiper
-            modules={[Navigation, Pagination]}
-            navigation={{
-              nextEl: '.custom-next',
-              prevEl: '.custom-prev',
-            }}
-            pagination={{
-              clickable: true,
-              el: '.custom-pagination',
-            }}
-            spaceBetween={20}
-            slidesPerView={1}
-          >
+        <Swiper
+  modules={[Navigation, Pagination]}
+  navigation={{
+    nextEl: '.custom-next',
+    prevEl: '.custom-prev',
+  }}
+  pagination={{
+    clickable: true,
+    el: '.custom-pagination',
+  }}
+  spaceBetween={20}
+  slidesPerView={1}
+>
             {images.map((image, index) => (
               <SwiperSlide key={index}>
                 <div className="relative w-full h-[390px]">
@@ -115,44 +115,59 @@ const Activities = () => {
     
           <div className="custom-next absolute top-1/2 right-0 transform -translate-y-1/2 z-10 cursor-pointer pr-[15px]">
             <Image
-              src="/arrow-right.png"
+              src="/arrow-right.svg"
               alt="Próxima"
-              width={25}
-              height={25}
+              width={35}
+              height={35}
               unoptimized
             />
           </div>
           <div className="custom-prev absolute top-1/2 left-0 transform -translate-y-1/2 z-10 cursor-pointer pl-[15px]">
             <Image
-              src="/arrow-left.png"
+              src="/arrow-left.svg"
               alt="Anterior"
-              width={25}
-              height={25}
+              width={35}
+              height={35}
               unoptimized
             />
           </div>
     
-          <div className="custom-pagination absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 flex justify-center space-x-2">
-            <style global jsx>{`
-            .custom-pagination {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-              }
-              .custom-pagination .swiper-pagination-bullet {
-                background-color: gray;
-                opacity: 1;
-                width: 8px;
-                height: 8px;
-                margin: 0 4px;
-                cursor: pointer;
-              }
-              .custom-pagination .swiper-pagination-bullet-active {
-                background-color: white;
-              }
-            `}</style>
-          </div>
+          <div className="pagination-wrapper">
+  <style global jsx>{`
+    .pagination-wrapper {
+      position: absolute !important;
+      bottom: 20px !important;
+      left: 0 !important;
+      width: 100% !important;
+      z-index: 10 !important;
+      display: flex !important;
+      justify-content: center !important;
+    }
+    
+    .custom-pagination {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: auto !important;
+      position: static !important;
+      transform: none !important;
+    }
+    
+    .swiper-pagination-bullet {
+      background-color: gray !important;
+      opacity: 1 !important;
+      width: 8px !important;
+      height: 8px !important;
+      margin: 0 4px !important;
+      cursor: pointer !important;
+    }
+    
+    .swiper-pagination-bullet-active {
+      background-color: white !important;
+    }
+  `}</style>
+  <div className="custom-pagination"></div>
+</div>
         </div>
     
         <div className="relative">

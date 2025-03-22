@@ -59,12 +59,20 @@ export function MenuMobile() {
           <div className="w-full flex flex-col gap-[30px] text-black">
             {MenuItems.map((item) => (
               <a
-                href={`#${item.link}`}
-                key={item.link}
-                onClick={() => setIsOpen(false)}
-                className='text-[19px] text-[#060606]'
-              >
-                {item.label}
+              href={`#${item.link}`}
+              key={item.link}
+              onClick={(e) => {
+                e.preventDefault();
+                setIsOpen(false);
+                const element = document.getElementById(item.link);
+                if (element) {
+                  const y = element.getBoundingClientRect().top + window.pageYOffset - 100; // 60px para mobile
+                  window.scrollTo({top: y, behavior: 'smooth'});
+                }
+              }}
+              className='text-[19px] text-[#060606]'
+            >
+              {item.label}
               </a>
             ))}
           </div>

@@ -7,7 +7,7 @@ export interface MenuItemsProps {
 export const MenuItems: MenuItemsProps[] = [
     {
         label: 'Home',
-        link: '',
+        link: 'home',
     },
     {
         label: 'Unidades',
@@ -15,7 +15,7 @@ export const MenuItems: MenuItemsProps[] = [
     },
     {
         label: 'Quem somos',
-        link: 'sobre-nos',
+        link: 'sobre',
     },
     {
         label: 'Atividades',
