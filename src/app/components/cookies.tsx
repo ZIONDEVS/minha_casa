@@ -110,10 +110,10 @@ const CookieConsent = () => {
 
   return (
     <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[718px] md:px-[43px] px-[28px] py-[35px] bg-white rounded-[20px] shadow-md z-50">
-      <p className="text-center text-gray-700 mb-6">
+      <p className="text-center text-gray-700 mb-6  text-[16px]">
       Nosso site utiliza cookies para melhorar sua experiência, personalizar conteúdo e analisar o tráfego. Ao continuar navegando, você concorda com o uso de cookies. Para mais informações, consulte nossa {" "}
         <a
-          className="font-bold underline cursor-pointer text-black-500"
+          className="font-bold underline cursor-pointer text-black-500  text-[16px]"
           href="/politica-de-privacidade"
         >
           Política de Privacidade.
