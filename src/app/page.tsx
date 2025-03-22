@@ -12,6 +12,7 @@ import Image from 'next/image';
 import Activities from './components/ activities';
 import Facilities from './components/facilities';
 import Contact from './components/contact';
+import CookieConsent from './components/cookies';
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
       </a>
         <Header />
         <MenuMobile/>
-        {/* <CookieConsent/> */}
+        <CookieConsent/>
         <Hero />
         <Units/>
         <AboutUs/>

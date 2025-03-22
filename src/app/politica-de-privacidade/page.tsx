@@ -6,6 +6,7 @@ import { MenuMobile } from '../components/header/menuMobile';
 
 import Footer from '../components/footer';
 import Text from './components/text';
+import CookieConsent from '../components/cookies';
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
       </a>
         <Header />
         <MenuMobile/>
-        {/* <CookieConsent/> */}
+        <CookieConsent/>
         <Text/>
         <Footer/>
       </div>
